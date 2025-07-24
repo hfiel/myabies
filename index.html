@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es-es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>MyAbies - Descargar</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<h1>MyAbies</h1>
+
+	<h3>MyAbies es un proyecto de software libre realizado por <a href="http://hfiel.es" target="_blank">Héctor Fiel Martín</a>.</h3>
+	<p>
+	MyAbies permite consultar el catálogo bibliotecario Abies desde un navegador Web, ofreciendo una interfaz sencilla de consulta y administración. Se encuentra implementado sobre PHP y MySQL, y su uso es libre.<br/>
+	</p> 
+	<hr>
+	<h2>
+		<span style="font-weight: bold;">Descarga de MyAbies</span>
+	</h2>
+	<hr/>
+	<h3>
+	Descarga: Importante, ver condiciones abajo.
+	</h3>
+	<ul>
+	<li><a href="files/myabies.zip">MyAbies 1.0</a> (formato zip).</li>
+	<li><a href="files/myabies.tar.gz">MyAbies 1.0</a> (formato tar.gz).</li>
+	</ul>
+	<hr/>
+	<h3>
+	Requisitos:
+	</h3>
+	Para poder instalar MyAbies en tu propio servidor necesitas:
+	<ol>
+		<li>PHP 4 ó superior activado en el servidor.</li>
+		<li>Base de datos MySQL 4 ó superior activada en el servidor. <a href="" onclick="return alert('Necesitas un usuario con permisos de escritura para poder actualizar la BBDD desde MyAbies.');">?</a></li>
+		<li>Programa Abies 2 versión 2.0.8.3 <a href="" onclick="return alert('Abies 2 deberá estar instalado en la ruta por defecto, C:\\Archivos de programa\\Abies2. Cualquier otra ruta no funcionará');">?</a> en la máquina cliente (normalmente, un equipo de biblioteca).</li>
+		<li>Microsoft Access 2003 <a href="" onclick="return alert('MyAbies ha sido probado en MS Access 2003, pero es posible que funcione en versiones anteriores');">?</a> en la misma máquina cliente que tenga instalado Abies 2.</li>
+	</ol>
+	MyAbies ha sido desarrollado y probado en servidores Web Apache. Se desconoce su comportamiento en otro tipo de servidores.
+	<hr/>
+	<h3>
+	Instalación en el servidor:
+	</h3>
+	<ol>
+		<li>Descarga el fichero <a href="files/myabies.zip">myabies.zip</a>, y descomprímelo.</li>
+		<li>Sube los archivos a tu servidor <a href="" onclick="return alert('La carpeta content/data necesita permisos de escritura para poder guardar los ficheros de configuración.');">?</a> (te recomiendo que lo hagas en una carpeta propia, PE <em>myabies</em>)</li>
+		<li>Al acceder la primera vez a la página <em>index.php</em>, comenzará el asistente de instalación de MyAbies:
+			<ol>
+				<li>Crea el usuario y la contraseña de administración.</li>
+				<li>Define los parámetros de conexión a la BBDD. Si la BBDD indicada no existe, MyAbies intentará crearla.</li>
+			</ol>
+		</li>
+		<li>Si todo es correcto, estarás en la pantalla de login de administración. Deberás acceder para completar la configuación y cargar los datos de MyAbies.</li>
+		<li>Entra en la sección <em>Configurar título</em>. Establece el título de la página y el enlace externo (por ejemplo, a la página Web de tu biblioteca o centro).</li>
+		<li>Por último, vamos a cargar los datos de Abies en la página. Accede a la sección <em>Actualizar MyAbies</em> (es la sección por defecto al entrar en la administración).</li>
+			<ol>
+				<li>Desde el equipo donde se encuentra instalado Abies 2, descarga el fichero <em>myabies.mdb</em> disponible en esa sección.</li>
+				<li>Abre el fichero, y permite las advertencias de seguridad (si no lo haces, no podrás proseguir).</li>
+				<li>Sige las instrucciones para generar el fichero <em>myabiesdump.sql</em></li>
+				<li>Desde la sección de actualización de MyAbies, localiza y envía el fichero que acabas de generar.</li>
+				<li>Si se producen errores, lo primero que debes comprobar son los datos de conexión a la BBDD. En caso de que los errores persistan, puedes emplear herramientas como <em>phpMyAdmin</em> para volcar la información a la BBDD.</li>
+				<li>Una vez haya finalizado correctamente la actualización, ya puedes salir de la zona de administración.</li>
+			</ol>
+		<li>La página ya está lista, y puedes comenzar a realizar consultas, accediedo a la raíz de la carpeta donde hayas instalado MyAbies.</li>
+		<li>Para llevar a cabo futuras actualizaciones, accede a la página <em>admin.php</em> y podrás entrar a la zona de administación con el nombre y la clave que definiste durante la instalación (paso 3.1).</li>
+	</ol>
+
+	<hr/>
+	<h2>
+		<span style="font-weight: bold;">Reconocimientos</span>	
+	</h2>
+	<ul>
+		<li>
+			Mi reconocimiento para Alberto Ruíz, por ser el creador de Abies-web-mysql, proyecto en el que se basa MyAbies.
+		</li>
+		<li>
+			El estilo CSS es una adaptación de la plantilla <a href="http://www.freecsstemplates.org/preview/unembellished">Unembellished</a> de <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+		</li>
+	</ul>
+
+
+	<h3>
+	Condiciones: 
+	</h3>
+	<p>
+	 MyAbies es software libre, cualquiera puede descargarlo, utilizarlo y modificar su funcionamiento, con las condiciones: <ol> <li>Incluir un enlace a la página <a href="http://myabies.hfiel.es">http://myabies.hfiel.es</a>.</li> <li>El resultado debe ser también software libre bajo las mismas condiciones.</li></ol>
+	 MyAbies se entrega "<em>tal cual</em>", sin ninguna garantía sobre su funcionamiento.<br/>
+	 El autor no se hace responsable sobre cualquier problema que pueda generar directa o indirectamente el uso del programa, incluyendo (pero no exclusivamente):
+	 <ol>
+	 	<li>Daños al programa Abies 2 y su base de datos.</li>
+	 	<li>Daños a los ficheros e información almacenados en el servidor de alojamiento y las bases de datos asociadas.</li>
+	 	<li>Daños a los ficheros e información almacenados en la máquina cliente.</li>
+	 	<li>Cualquier otro tipo de daños o pérdida de información.</li>
+	 </ol>
+	 No se ofrece soporte alguno al uso de la aplicación. Cualquier duda o problema que surja durante su utilización, deberá ser resuelto por el usuario.
+	</p>
+	<hr/>
+	 Los nombres de otras marcas y productos informáticos que se mencionan aquí aparecen únicamente con fines de identificación y son marcas registradas de sus respectivos titulares. <br/>
+	 Microsoft Access es una marca registrada de Microsoft Corporation.<br/>
+	 MySQL es una marca registrada de Sun Microsystems.<br/>
+	 PHP es una marca registrada de The PHP Group.<br/>
+	</body>
+</html>
